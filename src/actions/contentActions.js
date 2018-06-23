@@ -1,4 +1,4 @@
-
+const API_URL = process.env.API_URL
 const headers = {
   "Content-Type": "application/json",
   "Accept": "application/javascript"
