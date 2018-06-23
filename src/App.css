@@ -1,95 +1,37 @@
-.App {
-  text-align: center;
-  height: 100%;
-  font-family: 'Ubuntu Mono', monospace;
-  background-color: #c1c1c1;
-  margin-bottom: 0;
-  background-color: #c1c1c1;
-}
-
-.song {
-  text-align: left;
-  vertical-align: middle;
-  height: 50px;
-  width: 100%;
-  z-index: 2;
-}
-
-.song-play {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.song-text {
-  width: 75%;
-  height: 50%;
-  overflow: hidden;
-  text-align: left;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.song-like {
-  display: inline;
-  position: relative;
-  z-index: 2;
-  top: 15%;
-  bottom: 50%;
-  height: 30px;
-  vertical-align: middle;
-  float: right;
-  padding-top: 5px;
-  padding-right: 10px;
-}
-
-.song-meta {
-  display:inline;
-  vertical-align: middle;
-  color: grey;
-  font-size: 12px;
-}
-
-.song-artist {
-  font-size: 15px;
-  vertical-align: middle;
-}
-
-.song-playcount {
-  font-size: 9px;
-  display: inline;
-  vertical-align: middle;
-  text-align: right;
-  color: lightgrey;
-}
-
-#follow-button {
-  font-size: 12px;
-}
-
-#user-tracks {
-  width: 45%;
-  display: inline-block;
-  vertical-align: top;
-}
-
-#user-favorites {
-  width: 45%;
-  display: inline-block;
-  vertical-align: top;
-}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0; }
 
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
   background-color: #c1c1c1;
-  position: absolute;
-}
+  position: absolute; }
+
+.App {
+  height: 100%;
+  background-color: #c1c1c1;
+  margin-bottom: 0; }
+
+#follow-button {
+  font-size: 12px; }
+
+#user-tracks {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top; }
+
+#user-favorites {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top; }
 
 .song-date {
   font-size: 10px;
-  font-style: italic;
-}
+  font-style: italic; }
 
 #uploadDiv {
   display: inline-block;
@@ -97,8 +39,7 @@ html, body {
   width: 300px;
   height: 500px;
   padding-top: 40px;
-  justify-content: center;
-}
+  justify-content: center; }
 
 #mainBody {
   display: inline-block;
@@ -112,8 +53,7 @@ html, body {
   float: right;
   position: fixed;
   right: 0px;
-  background-color: #c1c1c1;
-}
+  background-color: #c1c1c1; }
 
 #sidebar {
   font-family: 'Share Tech Mono', monospace;
@@ -124,19 +64,16 @@ html, body {
   width: 10%;
   padding-top: 60px;
   height: 100%;
-  float: left;
-}
+  float: left; }
 
 .sidebarButton {
-  color: #b2b2b2;
-}
+  color: #efefef; }
 
 #songList {
   padding: 0px;
-  border-color: rgb(170, 170, 170);
+  border-color: #444444;
   border-style: solid;
-  border-width: 2px;
-}
+  border-width: 2px; }
 
 #showDiv {
   display: block;
@@ -148,47 +85,39 @@ html, body {
   width: 100%;
   height: 80%;
   z-index: 1;
-  background-color: #c1c1c1;
-}
+  background-color: #c1c1c1; }
 
 #threeCanvas {
   z-index: 2;
   display: inline-block;
   position: fixed;
-  left: 0;
-}
+  left: 0; }
 
 #comments {
   height: 50vh;
   display: block;
-  padding-bottom: 0;
-}
+  padding-bottom: 0; }
 
 #commentDiv {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 #editTrack {
-  font-size: 18px;
-}
+  font-size: 18px; }
 
 #editForm {
   position: absolute;
-  width: 80%;
-}
+  width: 80%; }
 
 #showName {
   display: inline-block;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 #showDesc {
   padding: 20px;
   font-size: 14px;
   text-align: left;
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
 
 #showHeader {
   display: block;
@@ -196,8 +125,7 @@ html, body {
   width: 100%;
   border-color: lightgrey;
   border-style: solid;
-  border-width: 2px;
-}
+  border-width: 2px; }
 
 #transport {
   position: fixed;
@@ -206,8 +134,7 @@ html, body {
   height: 100px;
   width: 100%;
   text-align: left;
-  font-family: 'Share Tech Mono', monospace;
-}
+  font-family: 'Share Tech Mono', monospace; }
 
 #transport-canvas {
   position: fixed;
@@ -215,8 +142,7 @@ html, body {
   height: 100px;
   width: 100%;
   text-align: left;
-  font-family: 'Share Tech Mono', monospace;
-}
+  font-family: 'Share Tech Mono', monospace; }
 
 #transport-meta {
   position: fixed;
@@ -226,39 +152,96 @@ html, body {
   background-color: #444444;
   z-index: 1;
   right: 0;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 .volSlider {
   position: absolute;
   right: 0px;
   width: 400px;
-  z-index: 1;
-}
+  z-index: 1; }
 
 #vol-control {
-  display: fixed;
-}
+  display: fixed; }
 
 #navbar {
   width: 100%;
   height: 40px;
-  background-color: grey;
+  background-color: #444444;
+  color: #efefef;
   margin-bottom: 20px;
-  text-align: left;
-}
+  text-align: left; }
 
 .navStuff {
-  font-family: 'Share Tech Mono', monospace;
-}
+  font-family: 'Share Tech Mono', monospace; }
 
 #navbarLogo {
-  font-family: 'Share Tech Mono', monospace;
-}
+  font-family: 'Share Tech Mono', monospace; }
 
 #play-button {
   position: fixed;
   z-index: 1;
   width: 100px;
-  height: 100px;
-}
+  height: 100px; }
+
+@keyframes floatInBottom {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.App {
+  text-align: center;
+  font-family: 'Ubuntu Mono', monospace; }
+
+#sidebar {
+  font-family: 'Share Tech Mono', monospace; }
+
+.song {
+  text-align: left;
+  vertical-align: middle;
+  height: 50px;
+  width: 100%;
+  z-index: 2;
+  border-radius: 10px;
+  transition: all .5s;
+  animation: floatInBottom .5s ease-out;
+  animation-fill-mode: backwards; }
+  .song-play {
+    display: inline-block;
+    vertical-align: middle; }
+    .song-play:hover {
+      transform: scale(1.1); }
+    .song-play:active {
+      transform: scale(1); }
+  .song-text {
+    width: 75%;
+    height: 50%;
+    overflow: hidden;
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block; }
+  .song-like {
+    display: inline;
+    position: relative;
+    z-index: 2;
+    top: 15%;
+    bottom: 50%;
+    height: 30px;
+    vertical-align: middle;
+    float: right;
+    padding-top: 5px;
+    padding-right: 10px; }
+  .song-meta {
+    display: inline;
+    vertical-align: middle;
+    font-size: 12px; }
+  .song-artist {
+    font-size: 15px;
+    vertical-align: middle; }
+  .song-playcount {
+    font-size: 9px;
+    display: inline;
+    vertical-align: middle;
+    text-align: right;
+    color: lightgrey; }
