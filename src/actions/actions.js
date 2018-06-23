@@ -163,7 +163,7 @@ export function setSongs(songs) {
 
 export function setSongsStream(id) {
   return (dispatch) => {
-    fetch(`http://localhost:3000/api/v1/users/${id}/stream`)
+    fetch(API_URL + `api/v1/users/${id}/stream`)
     .then(r => r.json())
     .then(json => {
       dispatch({
