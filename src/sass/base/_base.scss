@@ -23,18 +23,6 @@ html, body {
   font-size: 12px;
 }
 
-#user-tracks {
-  width: 45%;
-  display: inline-block;
-  vertical-align: top;
-}
-
-#user-favorites {
-  width: 45%;
-  display: inline-block;
-  vertical-align: top;
-}
-
 .song-date {
   font-size: 10px;
   font-style: italic;
@@ -78,26 +66,6 @@ html, body {
 
 .sidebarButton {
   color: $color-font-grey;
-}
-
-#songList {
-  padding: 0px;
-  border-color: $color-background-transport;
-  border-style: solid;
-  border-width: 2px;
-}
-
-#showDiv {
-  display: block;
-  position: absolute;
-  padding-left: 20px;
-  font-size: 12px;
-  text-align: left;
-  float: left;
-  width: 100%;
-  height: 80%;
-  z-index: 1;
-  background-color: $color-background-grey;
 }
 
 #threeCanvas {
@@ -148,47 +116,6 @@ html, body {
   border-width: 2px;
 }
 
-#transport {
-  position: fixed;
-  bottom: 0px;
-  z-index: 4;
-  height: 100px;
-  width: 100%;
-  text-align: left;
-  font-family: 'Share Tech Mono', monospace;
-}
-
-#transport-canvas {
-  position: fixed;
-  bottom: 0px;
-  height: 100px;
-  width: 100%;
-  text-align: left;
-  font-family: 'Share Tech Mono', monospace;
-}
-
-#transport-meta {
-  position: fixed;
-  width: 30%;
-  padding-left: 20px;
-  color: $color-font-grey;
-  background-color: $color-background-transport;
-  z-index: 1;
-  right: 0;
-  vertical-align: middle;
-}
-
-.volSlider {
-  position: absolute;
-  right: 0px;
-  width: 400px;
-  z-index: 1;
-}
-
-#vol-control {
-  display: fixed;
-}
-
 #navbar {
   width: 100%;
   height: 40px;
@@ -204,11 +131,4 @@ html, body {
 
 #navbarLogo {
   font-family: 'Share Tech Mono', monospace;
-}
-
-#play-button {
-  position: fixed;
-  z-index: 1;
-  width: 100px;
-  height: 100px;
 }

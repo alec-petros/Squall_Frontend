@@ -1,0 +1,8 @@
+#songList {
+  padding: 0px;
+  background-color: $color-background-grey-secondary;
+  border-radius: 10px;
+
+  animation: floatInBottom .2s ease-out;
+  animation-fill-mode: backwards;
+}

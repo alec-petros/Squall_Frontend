@@ -8,9 +8,6 @@
 
   transition: all .5s;
 
-  animation: floatInBottom .5s ease-out;
-  animation-fill-mode: backwards;
-
   &-play {
     display: inline-block;
     vertical-align: middle;
@@ -42,6 +39,13 @@
     float: right;
     padding-top: 5px;
     padding-right: 10px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(1);
+    }
   }
 
   &-meta {

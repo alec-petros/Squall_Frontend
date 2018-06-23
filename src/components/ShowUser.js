@@ -19,8 +19,8 @@ class ShowUser extends React.Component {
     null;
     this.props.showUser ?
     songs = (
-      <div id="showDiv">
-        <h1>{this.props.showUser.name}</h1>
+      <div className="showDiv">
+        <h1 className="showDiv--name">{this.props.showUser.name}</h1>
         {
           this.props.auth && this.props.showUser.id !== this.props.auth.user_id ?
             follow ?
@@ -30,11 +30,11 @@ class ShowUser extends React.Component {
           null
         }
         <br></br>
-        <div id="user-tracks">
+        <div className="showDiv--tracks">
           <h4>{this.props.showUser.name}s Tracks</h4>
           <SongList history={ this.props.history } songs={ this.props.showUser.tracks } />
         </div>
-        <div id="user-favorites">
+        <div className="showDiv--favorites">
           <h4>{this.props.showUser.name}s Favorites</h4>
           <SongList history={ this.props.history } songs={ this.props.showUser.favorites } />
         </div>

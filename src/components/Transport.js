@@ -25,7 +25,7 @@ class Transport extends React.Component {
     this.audioStore.analyser = this.audioStore.audioCtx.createAnalyser();
     this.audioStore.analyser.smoothingTimeConstant = 1
     this.audioStore.gainNode = this.audioStore.audioCtx.createGain()
-    this.audioStore.canvas = document.getElementById("transport-canvas")
+    this.audioStore.canvas = document.querySelector(".transport-canvas")
     this.audioStore.canvasCtx = this.audioStore.canvas.getContext('2d')
 
     // this.audioStore.htmlElement = document.getElementById('transport-audio')
@@ -167,18 +167,18 @@ class Transport extends React.Component {
     )
 
     return (
-      <div  id="transport">
+      <div  className="transport">
         {
           this.props.transportMode === 'pause' ?
-          <img onClick={this.startPlayback} id="play-button" src={play}></img> :
-          <img onClick={this.stopPlayback} id="play-button" src={pause}></img>
+          <img onClick={this.startPlayback} className="transport-play-button" src={play}></img> :
+          <img onClick={this.stopPlayback} className="transport-play-button" src={pause}></img>
         }
-        <Panel id="transport-meta">
+        <Panel className="transport-meta">
           <h4>{this.props.activeSong.artist}</h4>
           <p>{this.props.activeSong.name.substring(0, 18)} ({this.state.location} Seconds / {Math.floor(this.state.duration / 60)} Minutes)</p>
           <p>({this.props.activeSong.play_count} Plays)</p>
         </Panel>
-        <canvas id="transport-canvas" width="800" height='100'></canvas>
+        <canvas className="transport-canvas" width="800" height='100'></canvas>
       </div>
     )
   }

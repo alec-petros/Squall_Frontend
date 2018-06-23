@@ -1,0 +1,37 @@
+.showDiv {
+  display: block;
+  position: absolute;
+  padding-left: 20px;
+  font-size: 12px;
+  text-align: left;
+  float: left;
+  width: 100%;
+  height: 80%;
+  z-index: 1;
+  background-color: $color-background-grey;
+
+  text-transform: lowercase;
+  text-align: center;
+
+  animation: floatInBottom .2s ease-out;
+  animation-fill-mode: backwards;
+
+  &--name {
+    letter-spacing: 10px;
+    font-weight: 600;
+
+  }
+
+  &--tracks {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &--favorites {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+}

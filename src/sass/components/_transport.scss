@@ -1,0 +1,47 @@
+.transport {
+  position: fixed;
+  bottom: 0px;
+  z-index: 4;
+  height: 100px;
+  width: 100%;
+  text-align: left;
+  font-family: 'Share Tech Mono', monospace;
+
+  animation: slideInBottom .5s ease-out;
+
+  &-canvas {
+    position: fixed;
+    bottom: 0px;
+    height: 100px;
+    width: 100%;
+    text-align: left;
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  &-meta {
+    position: fixed;
+    width: 30%;
+    padding-left: 20px;
+    color: $color-font-grey;
+    background-color: $color-background-transport;
+    z-index: 1;
+    right: 0;
+    vertical-align: middle;
+  }
+
+  &-play-button {
+    position: fixed;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+
+}
