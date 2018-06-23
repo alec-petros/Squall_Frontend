@@ -26,16 +26,16 @@ class CommentContainer extends React.Component {
   }
 
   render() {
-    const comments = this.props.song.comments.map(com => <Well onClick={() => {this.props.history.push(`/users/${com.user.id}`)}}>{com.user.username} - {com.content}</Well>)
+    const comments = this.props.song.comments.map(com => <Well className="comments-comment" onClick={() => {this.props.history.push(`/users/${com.user.id}`)}}><span className="comments-comment-user">{com.user.username}</span>: {com.content}</Well>)
 
     return (
-      <div id="commentDiv">
-        <form id="commentForm" onChange={this.handleChange} onSubmit={this.handleSubmit}>
+      <div className="comments">
+        <form className="comments-form" onChange={this.handleChange} onSubmit={this.handleSubmit}>
           <input name="content" value={this.state.content} size="40" />
-          <input type="submit" value="Save Comment" />
+          <input className="btn btn-app" type="submit" value="Save Comment" />
           <br></br><br></br>
         </form>
-        <ul id="comments">
+        <ul className="comments-list">
           { comments }
         </ul>
       </div>

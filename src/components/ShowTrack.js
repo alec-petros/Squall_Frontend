@@ -4,6 +4,7 @@ import Song from './Song'
 import CommentContainer from '../containers/CommentContainer'
 import { connect } from 'react-redux'
 import { setShow, setActive } from '../actions/actions'
+import { fetchTrack } from '../actions/contentActions'
 
 class ShowTrack extends React.Component {
 
@@ -14,7 +15,7 @@ class ShowTrack extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchData()
+    this.props.fetchTrack(this.props.match.params.id, this.props.auth)
   }
 
   handleChange = (e) => {
@@ -111,8 +112,8 @@ class ShowTrack extends React.Component {
       show = (
         <div id="showDiv">
           <Song song={this.props.showSong} />
-          {this.props.showSong.owner === true ? <button onClick={this.changeMode}>Edit Song</button> : null}
-          <button onClick={() => this.props.history.push('/simple')}>Visualize</button>
+          {this.props.showSong.owner === true ? <button className="btn btn-app" onClick={this.changeMode}>Edit Song</button> : null}
+          <button className="btn btn-app" onClick={() => this.props.history.push('/simple')}>Visualize</button>
           <h4 id="showDesc">{this.props.showSong.artist} says: '{this.props.showSong.description}'</h4>
           <CommentContainer history={this.props.history} song={this.props.showSong} />
         </div>
@@ -148,4 +149,4 @@ class ShowTrack extends React.Component {
 function mapStateToProps(state) {
   return {showSong: state.showSong, auth: state.auth}
 }
-export default connect(mapStateToProps, {setShow, setActive})(ShowTrack)
+export default connect(mapStateToProps, {setShow, setActive, fetchTrack})(ShowTrack)

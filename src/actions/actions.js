@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/"
+
 const headers = {
   "Content-Type": "application/json",
   "Accept": "application/javascript"
@@ -206,7 +206,7 @@ export function setShow(song) {
 
 export function setShowUser(id) {
   return (dispatch) => {
-    fetch(`http://localhost:3000/api/v1/users/${id}`, {
+    fetch(API_URL + `api/v1/users/${id}`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json',

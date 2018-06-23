@@ -65,15 +65,6 @@ html, body {
   position: fixed;
   left: 0; }
 
-#comments {
-  height: 50vh;
-  display: block;
-  padding-bottom: 0; }
-
-#commentDiv {
-  margin: 0;
-  padding: 0; }
-
 #editTrack {
   font-size: 18px; }
 
@@ -134,6 +125,22 @@ html, body {
 
 #sidebar {
   font-family: 'Share Tech Mono', monospace; }
+
+.btn {
+  padding: 5px;
+  border-radius: 5px; }
+  .btn-app {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all .1s; }
+    .btn-app:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
+    .btn-app:active {
+      transform: translateY(1px);
+      box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
 
 .song {
   text-align: left;
@@ -227,6 +234,20 @@ html, body {
       transform: scale(0.9); }
     .transport-play-button:active {
       transform: scale(1); }
+
+.comments {
+  height: 50vh;
+  display: block;
+  padding-bottom: 0; }
+  .comments-comment {
+    text-align: left; }
+    .comments-comment-user {
+      font-size: 18px;
+      font-weight: 600; }
+
+#commentDiv {
+  margin: 0;
+  padding: 0; }
 
 .showDiv {
   display: block;

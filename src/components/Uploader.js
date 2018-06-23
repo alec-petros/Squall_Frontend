@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { addSong } from '../actions/actions'
+import { uploadTrack } from '../actions/contentActions'
 import loader from '../images/loader.gif'
 
 class Uploader extends React.Component {
@@ -25,17 +26,7 @@ class Uploader extends React.Component {
     formData.append('track_id', '1')
     formData.append('name', this.state.filename)
     formData.append('description', this.state.description)
-    fetch('http://localhost:3000/api/v1/audio_files', {
-      method: "POST",
-      headers: {
-        "Authorization": `Token token=${ this.props.auth.token }`
-      },
-      body: formData
-    }).then(r => r.json()).then(json => {
-      console.log(json)
-      this.props.addSong(json)
-      this.props.history.push('/')
-    })
+    this.props.uploadTrack(this.props.auth, formData)
   }
 
   render() {
@@ -57,4 +48,4 @@ function mapStateToProps(state) {
   return {auth: state.auth}
 }
 
-export default connect(mapStateToProps, {addSong})(Uploader)
+export default connect(mapStateToProps, { addSong, uploadTrack })(Uploader)

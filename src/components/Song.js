@@ -6,11 +6,12 @@ import fullHeart from '../images/fullHeart.png'
 import {withRouter} from 'react-router-dom'
 import { connect } from 'react-redux'
 import { setActive, like, unlike, getFavorites, transportClick } from '../actions/actions'
+import { playFetch } from '../actions/contentActions'
 
 class Song extends React.Component {
 
   play = () => {
-    fetch(`http://localhost:3000/api/v1/tracks/${this.props.song.id}/play`)
+    this.props.playFetch(this.props.song.id)
   }
 
   reroute = () => {
@@ -67,4 +68,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default withRouter(connect(mapStateToProps, { setActive, like, unlike, getFavorites, transportClick })(Song))
+export default withRouter(connect(mapStateToProps, { setActive, like, unlike, getFavorites, transportClick, playFetch })(Song))

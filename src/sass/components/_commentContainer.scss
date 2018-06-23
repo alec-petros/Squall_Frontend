@@ -1,0 +1,28 @@
+
+.comments {
+  height: 50vh;
+  display: block;
+  padding-bottom: 0;
+
+  &-form {
+
+  }
+
+  &-list {
+
+  }
+
+  &-comment {
+    text-align: left;
+
+    &-user {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
+
+#commentDiv {
+  margin: 0;
+  padding: 0;
+}
