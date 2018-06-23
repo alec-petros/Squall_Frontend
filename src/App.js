@@ -43,6 +43,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(process.env.API_URL)
     return (
       <div className="App">
         <Route path="/simple" component={Simple} />

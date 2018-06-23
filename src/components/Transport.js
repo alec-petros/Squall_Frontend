@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import { transportClick, setTransportPlay } from '../actions/actions'
 import {storeFFTData} from '../actions/contentActions'
 
+
 class Transport extends React.Component {
 
   state = {
@@ -167,7 +168,7 @@ class Transport extends React.Component {
     )
 
     return (
-      <div  className="transport">
+      <div  className="transport transport-div">
         {
           this.props.transportMode === 'pause' ?
           <img onClick={this.startPlayback} className="transport-play-button" src={play}></img> :
