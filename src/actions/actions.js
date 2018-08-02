@@ -151,7 +151,7 @@ export function logout() {
 
 export function setSongs(songs) {
   return (dispatch) => {
-    fetch(API_URL + '/tracks')
+    fetch(API_URL + 'api/v1/tracks')
     .then(r => r.json())
     .then(json => {
       dispatch({
