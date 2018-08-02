@@ -38,7 +38,7 @@ class ShowTrack extends React.Component {
         "Accept": "application/javascript"
       }
     }
-    fetch(`http://localhost:3000/api/v1/tracks/${this.props.match.params.id}`, {
+    fetch(`https://squall-backend.herokuapp.com/api/v1/tracks/${this.props.match.params.id}`, {
       method: "GET",
       headers: {
         ...headers
@@ -57,7 +57,7 @@ class ShowTrack extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    fetch(`http://localhost:3000/api/v1/tracks/${this.props.showSong.id}`, {
+    fetch(`https://squall-backend.herokuapp.com/api/v1/tracks/${this.props.showSong.id}`, {
       method: "PATCH",
       headers: {
         'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ class ShowTrack extends React.Component {
   }
 
   handleDelete = () => {
-    fetch(`http://localhost:3000/api/v1/tracks/${this.props.showSong.id}`, {
+    fetch(`https://squall-backend.herokuapp.com/api/v1/tracks/${this.props.showSong.id}`, {
       method: "DELETE",
       headers: {
         'Content-Type': 'application/json',

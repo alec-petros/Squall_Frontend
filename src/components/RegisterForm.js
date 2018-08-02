@@ -8,7 +8,7 @@ class RegisterForm extends React.Component {
       <div>
         <h3>Register</h3>
         <AuthForm { ...this.props }
-          url="http://localhost:3000/api/v1/users"
+          url="http://squall-backend.herokuapp.com/api/v1/users"
           mode="register"
           />
       </div>
