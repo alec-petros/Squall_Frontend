@@ -148,9 +148,10 @@ export function logout() {
   }
 }
 
+
 export function setSongs(songs) {
   return (dispatch) => {
-    fetch('http://localhost:3000/api/v1/tracks')
+    fetch(API_URL + '/tracks')
     .then(r => r.json())
     .then(json => {
       dispatch({
