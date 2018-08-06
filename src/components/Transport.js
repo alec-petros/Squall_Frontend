@@ -2,10 +2,12 @@ import React from 'react';
 import play from '../images/play.png'
 import pause from '../images/pause.png'
 import Panel from 'react-bootstrap/lib/Panel'
+import Button from 'react-bootstrap/lib/Button'
 import Slider from 'react-rangeslider'
+import Simple from '../containers/three/Simple'
 import 'react-rangeslider/lib/index.css'
 import { connect } from 'react-redux'
-import { transportClick, setTransportPlay } from '../actions/actions'
+import { transportClick, setTransportPlay, swapMode } from '../actions/actions'
 import {storeFFTData} from '../actions/contentActions'
 
 
@@ -177,9 +179,17 @@ class Transport extends React.Component {
         <Panel className="transport-meta">
           <h4>{this.props.activeSong.artist}</h4>
           <p>{this.props.activeSong.name.substring(0, 18)} ({this.state.location} Seconds / {Math.floor(this.state.duration / 60)} Minutes)</p>
-          <p>({this.props.activeSong.play_count} Plays)</p>
+          {/* <p>({this.props.activeSong.play_count} Plays)</p> */}
+          <button className="btn btn-app" onClick={() => {
+              this.props.history.push('/visualize')
+              this.props.swapMode()
+            }} >Visualize </button>
         </Panel>
-        <canvas className="transport-canvas" width="800" height='100'></canvas>
+        {
+          this.props.renderMode === "transport" ?
+          <canvas className="transport-canvas" width="800" height='100'></canvas> :
+          <Simple />
+        }
       </div>
     )
   }
@@ -189,4 +199,4 @@ function mapStateToProps(state) {
   return {activeSong: state.activeSong, transportMode: state.transportMode, renderMode: state.renderMode}
 }
 
-export default connect(mapStateToProps, { transportClick, setTransportPlay, storeFFTData })(Transport)
+export default connect(mapStateToProps, { transportClick, setTransportPlay, storeFFTData, swapMode })(Transport)

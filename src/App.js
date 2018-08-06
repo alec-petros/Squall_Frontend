@@ -43,6 +43,7 @@ class App extends Component {
   }
 
   render() {
+    console.log("app props", this.props)
     return (
       <div className="App">
         <Route path="/simple" component={Simple} />
@@ -61,12 +62,13 @@ class App extends Component {
           <Route path="/login" render={ (renderProps) =>
             <LoginForm authSet={ this.authFetched } history={ renderProps.history } />
           } />
-        <Route path="/tracks/:id" component={ShowTrack} />
-        <Route path="/users/:id" component={ShowUser} />
+          <Route path="/tracks/:id" component={ShowTrack} />
+          <Route path="/users/:id" component={ShowUser} />
+          <Route path="/visualize" render={ (renderProps) => <div></div>} />
         </div>
         {
           this.props.activeSong ?
-          <Transport key="transport" /> :
+          <Transport key="transport" history={this.props.history} /> :
           null
         }
       </div>

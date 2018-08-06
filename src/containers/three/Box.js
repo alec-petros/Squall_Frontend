@@ -13,9 +13,9 @@ class Resources extends React.Component {
     this.container.sphere.dynamic = true
     this.container.mat = new THREE.MeshPhongMaterial({emissive: "#600080", color: '0x00ff00', emissiveIntensity: 10})
     this.container.mesh = new THREE.Mesh(this.container.sphere, this.container.mat)
-    console.log('sphere', this.container.sphere)
+    // console.log('sphere', this.container.sphere)
     this.refs.group.add(this.container.mesh)
-    console.log(this.container.mesh)
+    // console.log(this.container.mesh)
   }
 
   render() {
