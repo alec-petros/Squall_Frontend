@@ -27,6 +27,7 @@ class Uploader extends React.Component {
     formData.append('name', this.state.filename)
     formData.append('description', this.state.description)
     this.props.uploadTrack(this.props.auth, formData)
+    .then(r => this.props.history.push('/')
   }
 
   render() {

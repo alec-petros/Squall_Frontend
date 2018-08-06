@@ -36,16 +36,17 @@ export function storeFFTData(func) {
 
 export function uploadTrack(auth, formData) {
   return (dispatch) => {
-    fetch(API_URL + 'api/v1/audio_files', {
+    return fetch(API_URL + 'api/v1/audio_files', {
       method: "POST",
       headers: {
         "Authorization": `Token token=${ auth.token }`
       },
       body: formData
-    }).then(r => r.json()).then(json => {
+    })
+    .then(r => r.json())
+    .then(json => {
       console.log(json)
-      this.props.addSong(json)
-      this.props.history.push('/')
+      dispatch({type: "ADD_SONG", payload: json})
     })
   }
 }
