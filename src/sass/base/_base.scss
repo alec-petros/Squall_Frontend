@@ -114,10 +114,19 @@ html, body {
   text-align: left;
 }
 
+.navbarLogo-img {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  height: 30px;
+}
+
 .navStuff {
   font-family: 'Share Tech Mono', monospace;
+  color: $color-font-grey;
 }
 
 #navbarLogo {
   font-family: 'Share Tech Mono', monospace;
+  color: $color-font-grey;
 }

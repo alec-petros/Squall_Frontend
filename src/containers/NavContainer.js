@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/lib/Nav'
 import NavItem from 'react-bootstrap/lib/NavItem'
 import { connect } from 'react-redux'
 import { logout, setSongs, setSongsStream } from '../actions/actions'
+import storm from '../images/storm-inv.png'
 
 class NavBar extends React.Component {
   render() {
@@ -12,23 +13,23 @@ class NavBar extends React.Component {
     navItems = (
       <Nav pullRight>
         <Navbar.Text className="navStuff" onClick={() => this.props.history.push(`/users/${this.props.auth.user_id}`)}>
-          Signed in as: {this.props.auth.username}
+          <span className="navStuff">Signed in as: {this.props.auth.username}</span>
         </Navbar.Text>
         <Navbar.Text className="navStuff" onClick={() => this.props.history.push(`/upload`)}>
-          Upload
+          <span className="navStuff">Upload</span>
         </Navbar.Text>
         <Navbar.Text className="navStuff" onClick={this.props.logout}>
-          Logout
+          <span className="navStuff">Logout</span>
         </Navbar.Text>
       </Nav>
     ) :
     navItems = (
       <Nav pullRight>
         <Navbar.Text className="navStuff" onClick={() => this.props.history.push(`/register`)}>
-          Register
+          <span className="navStuff">Register</span>
         </Navbar.Text>
         <Navbar.Text className="navStuff" onClick={() => this.props.history.push(`/login`)}>
-          Login
+          <span className="navStuff">Login</span>
         </Navbar.Text>
       </Nav>
     )
@@ -36,10 +37,11 @@ class NavBar extends React.Component {
       <Navbar inverse fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
+            <img className="navbarLogo-img" src={storm} />
             <a id="navbarLogo" onClick={() => {
                 this.props.setSongsStream(this.props.auth.user_id)
                 this.props.history.push(`/`)
-              }}>Squall V1</a>
+              }}>Squall V0.3</a>
           </Navbar.Brand>
         </Navbar.Header>
         {navItems}

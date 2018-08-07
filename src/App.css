@@ -98,11 +98,19 @@ html, body {
   margin-bottom: 20px;
   text-align: left; }
 
+.navbarLogo-img {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  height: 30px; }
+
 .navStuff {
-  font-family: 'Share Tech Mono', monospace; }
+  font-family: 'Share Tech Mono', monospace;
+  color: #efefef; }
 
 #navbarLogo {
-  font-family: 'Share Tech Mono', monospace; }
+  font-family: 'Share Tech Mono', monospace;
+  color: #efefef; }
 
 @keyframes floatInBottom {
   0% {
