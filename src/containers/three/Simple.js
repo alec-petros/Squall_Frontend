@@ -61,8 +61,6 @@ class Simple extends React.Component {
 
     this._onAnimate = () => {
       // we will get this callback every frame
-      // this.ringRot.x += 0.05;
-      // this.ringRot.y += 0.05;
       this.ringRot = new THREE.Euler(this.ringRot.x + 0.005, this.ringRot.y + 0.005, this.ringRot.z + 0.005)
       this.otherRingRot = new THREE.Euler(this.otherRingRot.x - 0.005, this.otherRingRot.y + 0.005, this.otherRingRot.z - 0.005)
       this.sphereRot = new THREE.Euler(0, 0, this.sphereRot.z - 0.005)

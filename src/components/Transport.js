@@ -188,7 +188,7 @@ class Transport extends React.Component {
         {
           this.props.renderMode === "transport" ?
           <canvas className="transport-canvas" width="800" height='100'></canvas> :
-          <Simple />
+            null
         }
       </div>
     )
