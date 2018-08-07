@@ -2,19 +2,13 @@ import React from 'react';
 import React3 from 'react-three-renderer';
 import * as THREE from 'three';
 import OBJLoader from 'three-obj-loader'
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux'
 import { swapMode } from '../../actions/actions'
-import grid from '../../images/grid.png'
 import stars from '../../images/stars.jpg'
 import Box from './Box'
 import Resources from './Resources'
 import FloorWire from './FloorWire'
-import mtn_obj from '../../models/mtn/mtn_obj.obj'
 import Loader from './Loader'
-import city from '../../models/city/city.obj'
-import peak from '../../models/peak/peak.obj'
-import vapor_mtn from '../../models/vapor_mtn.obj'
 import rand from '../../models/rand.obj'
 import MtnWire from './MtnWire'
 
@@ -67,8 +61,9 @@ class Simple extends React.Component {
 
 
       this.sinFunc.push(Math.sin((this.frameCount++ / 10)))
-      this.sinFunc.length === 431 ? this.sinFunc = this.sinFunc.slice(1, 431) : null
-      // console.log(this.sinFunc)
+      if (this.sinFunc.length === 431) {
+        this.sinFunc = this.sinFunc.slice(1, 431)
+      }
 
       if (this.props.dataArray) {
         let tempRms
@@ -120,13 +115,6 @@ class Simple extends React.Component {
   render() {
     const width = window.innerWidth; // canvas width
     const height = window.innerHeight; // canvas height
-    const lightPos = new THREE.Vector3(20, 0, 0)
-    const otherLightPos = new THREE.Vector3(0, 0, 0)
-    // const otherLightRot = new THREE.Euler(51, 60, 0)
-    const otherLightRot = new THREE.Euler(90, 0, 0)
-    const sphereMaterial = new THREE.MeshLambertMaterial({
-        color: 0xCC0000
-      });
 
     return (
       <div id="threeCanvas">

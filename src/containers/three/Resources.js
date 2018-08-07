@@ -1,5 +1,4 @@
 import React from 'react';
-import * as THREE from 'three';
 
 class Resources extends React.Component {
 
@@ -8,7 +7,7 @@ class Resources extends React.Component {
   }
 
   render() {
-    return (  
+    return (
       <resources>
         <meshLambertMaterial
           resourceId={'blackMat'}

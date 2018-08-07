@@ -23,7 +23,6 @@ class MtnWire extends React.Component {
         // const material = new THREE.MeshPhongMaterial({color: '#0b0019'})
         console.log(object.children[0])
         var geometry = new THREE.Geometry()
-        let vertices = []
         for (var i = 0; i < object.children[0].geometry.attributes.position.array.length; i) {
           geometry.vertices.push(new THREE.Vector3(object.children[0].geometry.attributes.position.array[i], object.children[0].geometry.attributes.position.array[i + 1], object.children[0].geometry.attributes.position.array[i + 2]))
           i = i + 3

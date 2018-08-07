@@ -37,7 +37,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("app props", this.props)
     return (
       <div className="App">
         <Route path="/simple" component={Simple} />

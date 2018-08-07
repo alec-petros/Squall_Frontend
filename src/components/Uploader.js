@@ -38,7 +38,7 @@ class Uploader extends React.Component {
           <textarea className="uploadDiv-form-description" placeholder="Description" name="description" value={this.state.description} onChange={this.handleChange}></textarea><br></br>
           <input className="uploadDiv-form-fileinput" type="file" id="fileInput"></input><br></br>
           <input className="uploadDiv-form-submit" type="submit"></input><br></br>
-          {this.state.mode === "submit" ? <img src={loader} id="loader"></img> : null}
+          {this.state.mode === "submit" ? <img src={loader} alt="Loading Animation" id="loader"></img> : null}
         </form>
       </div>
     )

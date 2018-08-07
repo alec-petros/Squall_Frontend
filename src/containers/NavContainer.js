@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/lib/Navbar'
 import Nav from 'react-bootstrap/lib/Nav'
-import NavItem from 'react-bootstrap/lib/NavItem'
 import { connect } from 'react-redux'
 import { logout, setSongs, setSongsStream } from '../actions/actions'
 import storm from '../images/storm-inv.png'
@@ -37,7 +36,7 @@ class NavBar extends React.Component {
       <Navbar inverse fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
-            <img className="navbarLogo-img" src={storm} />
+            <img className="navbarLogo-img" alt="Squall Logo" src={storm} />
             <a id="navbarLogo" onClick={() => {
                 this.props.setSongsStream(this.props.auth.user_id)
                 this.props.history.push(`/`)

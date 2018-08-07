@@ -1,5 +1,4 @@
 import React from 'react';
-import play from '../images/play.png'
 import Song from './Song'
 import CommentContainer from '../containers/CommentContainer'
 import { connect } from 'react-redux'
@@ -118,7 +117,7 @@ class ShowTrack extends React.Component {
           <CommentContainer className="singleTrack-comments" history={this.props.history} song={this.props.showSong} />
         </div>
       ) :
-      null
+      show = null
     } else {
       this.props.showSong ?
       show = (
@@ -135,7 +134,7 @@ class ShowTrack extends React.Component {
           <button onClick={this.handleDelete}>Delete</button>
         </div>
       ) :
-      null
+      show = null
     }
 
     return (

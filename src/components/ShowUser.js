@@ -12,11 +12,9 @@ class ShowUser extends React.Component {
   }
 
   render() {
-    let songs = null
-    let follow = null
-    this.props.showUser ?
-    follow = this.props.followsList.find(f => f.artist_id === this.props.showUser.id) :
-    null;
+    let songs = null;
+    let follow = null;
+    this.props.showUser ? follow = this.props.followsList.find(f => f.artist_id === this.props.showUser.id) : follow = null;
     this.props.showUser ?
     songs = (
       <div className="showDiv">
@@ -40,7 +38,7 @@ class ShowUser extends React.Component {
         </div>
       </div>
     ) :
-    null;
+    songs = null;
 
     return (
       <div>

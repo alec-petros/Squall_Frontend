@@ -317,7 +317,9 @@ html, body {
   margin-top: 2vh;
   border-radius: 10px;
   width: 40%;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  animation: floatInBottom .2s ease-out;
+  animation-fill-mode: backwards; }
 
 .authForm-username {
   margin-bottom: 1vh;

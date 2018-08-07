@@ -6,4 +6,7 @@
   border-radius: 10px;
   width: 40%;
   box-shadow: 0 3px 3px rgba($color-black, .2);
+
+  animation: floatInBottom .2s ease-out;
+  animation-fill-mode: backwards;
 }

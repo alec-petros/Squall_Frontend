@@ -1,7 +1,5 @@
 import React from 'react';
 import * as THREE from 'three';
-import city from '../../models/city/city.obj'
-import peak from '../../models/peak/peak.obj'
 
 class Loader extends React.Component {
 

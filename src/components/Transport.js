@@ -2,10 +2,6 @@ import React from 'react';
 import play from '../images/play.png'
 import pause from '../images/pause.png'
 import Panel from 'react-bootstrap/lib/Panel'
-import Button from 'react-bootstrap/lib/Button'
-import Slider from 'react-rangeslider'
-import Simple from '../containers/three/Simple'
-import 'react-rangeslider/lib/index.css'
 import { connect } from 'react-redux'
 import { transportClick, setTransportPlay, swapMode } from '../actions/actions'
 import {storeFFTData} from '../actions/contentActions'
@@ -160,34 +156,17 @@ class Transport extends React.Component {
 
   render() {
 
-
-    const slider = (
-      <Slider
-        className="volSlider"
-        value={this.state.vol}
-        onChange={this.changeValue}
-        />
-    )
-
     return (
       <div  className="transport transport-div">
         {
           this.props.transportMode === 'pause' ?
-          <img onClick={this.startPlayback} className="transport-play-button" src={play}></img> :
-          <img onClick={this.stopPlayback} className="transport-play-button" src={pause}></img>
+          <img onClick={this.startPlayback} alt="Play button" className="transport-play-button" src={play}></img> :
+          <img onClick={this.stopPlayback} alt="Pause button" className="transport-play-button" src={pause}></img>
         }
         <Panel className="transport-meta">
           <h4>{this.props.activeSong.artist}</h4>
           <p>{this.props.activeSong.name.substring(0, 18)} ({this.state.location} Seconds / {Math.floor(this.state.duration / 60)} Minutes)</p>
           <p>({this.props.activeSong.play_count} Plays)</p>
-          {/*
-          <button className="btn btn-app" onClick={() => {
-              this.props.history.push('/visualize')
-              this.props.swapMode()
-            }} >
-            Visualize
-          </button>
-          */}
         </Panel>
         <canvas className="transport-canvas" width="800" height='100'></canvas>
       </div>
