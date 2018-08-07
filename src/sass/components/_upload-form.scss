@@ -1,0 +1,50 @@
+.uploadDiv {
+
+  display: inline-block;
+  background-color: $color-background-panel;
+  padding: 20px;
+  margin-top: 2vh;
+  border-radius: 10px;
+  width: 40%;
+  box-shadow: 0 3px 3px rgba($color-black, .2);
+  &-form {
+
+    &-filename {
+      margin-bottom: 1vh;
+      width: 100%;
+      padding: 0.8vh;
+      border-radius: 10px;
+      border: none;
+    }
+    &-description {
+      margin-bottom: 1vh;
+      width: 100%;
+      height: 10vh;
+      padding: 0.8vh;
+      border-radius: 10px;
+      border: none;
+    }
+    &-fileinput {
+      margin-bottom: 1vh;
+      width: 100%;
+      border-radius: 10px;
+      border: none;
+    }
+    &-submit {
+      margin-bottom: 1vh;
+      width: 100%;
+      border-radius: 10px;
+      transition: all .1s;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 3px 3px rgba($color-black, .2);
+      }
+
+      &:active {
+        transform: translateY(1px);
+        box-shadow: 0 .5rem .5rem rgba($color-black, .2);
+      }
+    }
+  }
+}

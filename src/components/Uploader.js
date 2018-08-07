@@ -32,12 +32,12 @@ class Uploader extends React.Component {
 
   render() {
     return (
-      <div id="uploadDiv">
-        <form id="uploadForm" name="audio_file" onSubmit={this.handleSubmit}>
-          <input type="text" name="filename" placeholder="Name" value={this.state.filename} onChange={this.handleChange}></input><br></br>
-          <textarea placeholder="Description" name="description" value={this.state.description} onChange={this.handleChange}></textarea><br></br>
-          <input type="file" id="fileInput"></input><br></br>
-          <input type="submit"></input><br></br>
+      <div className="uploadDiv">
+        <form className="uploadDiv-form" id="uploadForm" name="audio_file" onSubmit={this.handleSubmit}>
+          <input className="uploadDiv-form-filename" type="text" name="filename" placeholder="Name" value={this.state.filename} onChange={this.handleChange}></input><br></br>
+          <textarea className="uploadDiv-form-description" placeholder="Description" name="description" value={this.state.description} onChange={this.handleChange}></textarea><br></br>
+          <input className="uploadDiv-form-fileinput" type="file" id="fileInput"></input><br></br>
+          <input className="uploadDiv-form-submit" type="submit"></input><br></br>
           {this.state.mode === "submit" ? <img src={loader} id="loader"></img> : null}
         </form>
       </div>
