@@ -1,0 +1,47 @@
+.authForm {
+
+  &-username {
+    margin-bottom: 1vh;
+    width: 100%;
+    padding: 0.8vh;
+    border-radius: 10px;
+    border: none;
+  }
+  &-password {
+    margin-bottom: 1vh;
+    width: 100%;
+    padding: 0.8vh;
+    border-radius: 10px;
+    border: none;
+  }
+  &-email {
+    margin-bottom: 1vh;
+    width: 100%;
+    padding: 0.8vh;
+    border-radius: 10px;
+    border: none;
+  }
+  &-display {
+    margin-bottom: 1vh;
+    width: 100%;
+    padding: 0.8vh;
+    border-radius: 10px;
+    border: none;
+  }
+  &-submit {
+    margin-bottom: 1vh;
+    width: 25%;
+    border-radius: 10px;
+    transition: all .1s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 3px 3px rgba($color-black, .2);
+    }
+
+    &:active {
+      transform: translateY(1px);
+      box-shadow: 0 .5rem .5rem rgba($color-black, .2);
+    }
+  }
+}

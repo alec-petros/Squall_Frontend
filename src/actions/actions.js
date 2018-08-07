@@ -141,6 +141,7 @@ export function setAuth(auth){
 
 export function logout() {
   return (dispatch) => {
+    localStorage.removeItem('auth')
     dispatch({
       type: "LOGOUT",
       payload: null

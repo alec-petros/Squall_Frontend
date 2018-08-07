@@ -37,28 +37,32 @@ class AuthForm extends React.Component {
   render(){
 
     const registerInputs=(
-      <form onSubmit={ this.handleSubmit }>
-        <label htmlFor="username">Username</label>
+      <form className="authForm" onSubmit={ this.handleSubmit }>
         <input type="text" onChange={ this.handleChange }
                            value={ this.state.username }
                            name="username"
+                           className="authForm-username"
+                           placeholder="Username"
                            id="username" /><br></br>
-        <label htmlFor="password">Password</label>
         <input type="password" onChange={ this.handleChange }
                            value={ this.state.password }
                            name="password"
+                           className="authForm-password"
+                           placeholder="Password"
                            id="password" /><br></br>
-        <label htmlFor="email">Email</label>
         <input type="text" onChange={ this.handleChange }
                            value={ this.state.email }
+                           className="authForm-email"
+                           placeholder="Email"
                            name="email"
                            id="email" /><br></br>
-         <label htmlFor="name">Display Name</label>
          <input type="text" onChange={ this.handleChange }
                             value={ this.state.name }
+                            className="authForm-display"
+                            placeholder="Display Name"
                             name="name"
                             id="name" /><br></br>
-        <input type="submit" />
+        <input type="submit" className="authForm-submit" />
       </form>
     )
 
@@ -66,18 +70,20 @@ class AuthForm extends React.Component {
       { this.state.errors.length ? this.errors() : "" }
       {
         this.props.mode === "login" ?
-        <form onSubmit={ this.handleSubmit }>
-          <label htmlFor="username">Username</label>
+        <form className="authForm" onSubmit={ this.handleSubmit }>
           <input type="text" onChange={ this.handleChange }
             value={ this.state.username }
             name="username"
+            className="authForm-username"
+            placeholder="Username"
             id="username" /><br></br>
-          <label htmlFor="password">Password</label>
           <input type="password" onChange={ this.handleChange }
             value={ this.state.password }
             name="password"
+            placeholder="Password"
+            className="authForm-password"
             id="password" /><br></br>
-          <input type="submit" />
+          <input type="submit" className="authForm-submit" />
         </form> :
         registerInputs
       }

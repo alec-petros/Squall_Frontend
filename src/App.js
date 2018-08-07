@@ -36,18 +36,12 @@ class App extends Component {
     this.setState({ auth });
   }
 
-  logout = () => {
-    localStorage.removeItem("auth")
-    this.props.logout()
-    this.setState({ auth: null })
-  }
-
   render() {
     console.log("app props", this.props)
     return (
       <div className="App">
         <Route path="/simple" component={Simple} />
-        <NavContainer history={this.props.history} logout={this.logout} />
+        <NavContainer history={this.props.history} />
         <SidebarContainer history={this.props.history} />
         <div id="mainBody">
           <Route exact path="/" render={ (renderProps) =>

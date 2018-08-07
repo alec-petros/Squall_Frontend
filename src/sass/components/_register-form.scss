@@ -1,0 +1,9 @@
+.register {
+  display: inline-block;
+  background-color: $color-background-panel;
+  padding: 20px;
+  margin-top: 2vh;
+  border-radius: 10px;
+  width: 40%;
+  box-shadow: 0 3px 3px rgba($color-black, .2);
+}
