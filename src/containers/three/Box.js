@@ -29,16 +29,16 @@ class Resources extends React.Component {
       // }
       // position.needsUpdate = true
       position.array.map(face => {
-        if (position.array[i] > (this.container.morphArr[i] + ((this.props.data()[x] / 5) - 24))) {
-          position.array[i] = (this.container.morphArr[i] + ((this.props.data()[x] / 5) - 24))
+        if (position.array[i] > (this.container.morphArr[i] + ((this.props.data[x] / 5) - 24))) {
+          position.array[i] = (this.container.morphArr[i] + ((this.props.data[x] / 5) - 24))
         } else {
-          position.array[i] = (((position.array[i] * 20) + this.container.morphArr[i] + ((this.props.data()[x] / 5) - 24)) / 21)
+          position.array[i] = (((position.array[i] * 20) + this.container.morphArr[i] + ((this.props.data[x] / 5) - 24)) / 21)
         }
         i++
         x++
-        x === this.props.data().length ? x = 0 : null
+        x === this.props.data.length ? x = 0 : null
       })
-      // console.log(this.props.data()[1] / 10)
+      // console.log(this.props.data[1] / 10)
       // console.log(this.props.data)
       // this.container.mesh.setGeometry(this.container.sphere)
       // console.log('this should work', this.container.mesh)

@@ -19,6 +19,11 @@ html, body {
 #follow-button {
   font-size: 12px; }
 
+#threeCanvas {
+  position: fixed;
+  top: 0%;
+  z-index: -1; }
+
 .song-date {
   font-size: 10px;
   font-style: italic; }
@@ -231,6 +236,13 @@ html, body {
   text-align: left;
   font-family: 'Share Tech Mono', monospace;
   animation: slideInBottom .5s ease-out; }
+  .transport-vis {
+    position: absolute;
+    z-index: 2;
+    right: 35%;
+    top: 37%;
+    padding: 5px;
+    border-radius: 10px; }
   .transport-canvas {
     position: fixed;
     bottom: 0px;

@@ -23,6 +23,12 @@ html, body {
   font-size: 12px;
 }
 
+#threeCanvas {
+  position: fixed;
+  top: 0%;
+  z-index: -1;
+}
+
 .song-date {
   font-size: 10px;
   font-style: italic;

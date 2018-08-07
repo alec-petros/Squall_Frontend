@@ -65,16 +65,16 @@ class Simple extends React.Component {
         this.sinFunc = this.sinFunc.slice(1, 431)
       }
 
-      if (this.props.dataArray) {
+      if (this.props.fftData) {
         let tempRms
-        if (Math.abs(this.props.dataArray()[5]) > this.state.rms) {
-          tempRms = (this.state.rms * 3 + Math.abs(this.props.dataArray()[5])) / 4
+        if (Math.abs(this.props.fftData[5]) > this.state.rms) {
+          tempRms = (this.state.rms * 3 + Math.abs(this.props.fftData[5])) / 4
         } else {
           tempRms = this.state.rms - 1
         }
-        let spacing = (window.innerWidth/this.props.dataArray().length) * 1.5
+        let spacing = (window.innerWidth/this.props.fftData.length) * 1.5
         let x = window.innerWidth
-        const data = this.props.dataArray()
+        const data = this.props.fftData
         let arr = []
         for (let i = 0; i < data.length; i++) {
           arr.push(new THREE.Vector3(x -= spacing, data[i], 0))
@@ -86,7 +86,7 @@ class Simple extends React.Component {
             0
           ),
           waveLines: arr,
-          cubeSize: (this.props.dataArray()[5] + (this.state.cubeSize * 10))/ 11,
+          cubeSize: (this.props.fftData[5] + (this.state.cubeSize * 10))/ 11,
           rms: tempRms
         });
       } else {
@@ -105,7 +105,7 @@ class Simple extends React.Component {
   }
 
   componentDidMount(){
-    this.props.swapMode()
+    // this.props.swapMode()
   }
 
   componentWillUnmount() {
@@ -172,7 +172,7 @@ class Simple extends React.Component {
               radius={100}
               widthSegments={35}
               heightSegments={35}
-              data={this.props.dataArray}
+              data={this.props.fftData}
               />
             <mesh
               position={this.spherePos}
