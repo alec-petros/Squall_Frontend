@@ -34,6 +34,7 @@
     z-index: 1;
     width: 100px;
     height: 100px;
+    transition: all .2s;
 
     &:hover {
       transform: scale(0.9);

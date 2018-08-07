@@ -179,11 +179,15 @@ class Transport extends React.Component {
         <Panel className="transport-meta">
           <h4>{this.props.activeSong.artist}</h4>
           <p>{this.props.activeSong.name.substring(0, 18)} ({this.state.location} Seconds / {Math.floor(this.state.duration / 60)} Minutes)</p>
-          {/* <p>({this.props.activeSong.play_count} Plays)</p> */}
+          <p>({this.props.activeSong.play_count} Plays)</p>
+          {/*
           <button className="btn btn-app" onClick={() => {
               this.props.history.push('/visualize')
               this.props.swapMode()
-            }} >Visualize </button>
+            }} >
+            Visualize
+          </button>
+          */}
         </Panel>
         {
           this.props.renderMode === "transport" ?

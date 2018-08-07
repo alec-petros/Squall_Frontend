@@ -150,7 +150,7 @@ html, body {
     margin-right: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    transition: all .1s; }
+    transition: all .2s; }
     .btn-app:hover {
       transform: translateY(-2px);
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
@@ -167,6 +167,7 @@ html, body {
   border-radius: 10px;
   transition: all .5s; }
   .song-play {
+    transition: all .2s;
     display: inline-block;
     vertical-align: middle; }
     .song-play:hover {
@@ -190,7 +191,8 @@ html, body {
     vertical-align: middle;
     float: right;
     padding-top: 5px;
-    padding-right: 10px; }
+    padding-right: 10px;
+    transition: all .2s; }
     .song-like:hover {
       transform: scale(1.1); }
     .song-like:active {
@@ -245,7 +247,8 @@ html, body {
     position: fixed;
     z-index: 1;
     width: 100px;
-    height: 100px; }
+    height: 100px;
+    transition: all .2s; }
     .transport-play-button:hover {
       transform: scale(0.9); }
     .transport-play-button:active {
