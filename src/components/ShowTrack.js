@@ -110,12 +110,12 @@ class ShowTrack extends React.Component {
     if (this.state.mode === 'show') {
       this.props.showSong ?
       show = (
-        <div id="showDiv">
+        <div className="singleTrack">
           <Song song={this.props.showSong} />
           {this.props.showSong.owner === true ? <button className="btn btn-app" onClick={this.changeMode}>Edit Song</button> : null}
           <button className="btn btn-app" onClick={() => this.props.history.push('/simple')}>Visualize</button>
-          <h4 id="showDesc">{this.props.showSong.artist} says: '{this.props.showSong.description}'</h4>
-          <CommentContainer history={this.props.history} song={this.props.showSong} />
+          <h4 className="singleTrack-desc" id="showDesc">{this.props.showSong.artist} says: '{this.props.showSong.description}'</h4>
+          <CommentContainer className="singleTrack-comments" history={this.props.history} song={this.props.showSong} />
         </div>
       ) :
       null

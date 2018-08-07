@@ -1,0 +1,16 @@
+.singleTrack {
+  padding: 5px;
+
+  animation: floatInBottom .2s ease-out;
+  animation-fill-mode: backwards;
+
+  &-desc {
+    padding: 20px;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  &-comments {
+
+  }
+}

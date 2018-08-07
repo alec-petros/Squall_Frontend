@@ -76,12 +76,6 @@ html, body {
   display: inline-block;
   vertical-align: middle; }
 
-#showDesc {
-  padding: 20px;
-  font-size: 14px;
-  text-align: left;
-  margin-bottom: 0; }
-
 #showHeader {
   display: block;
   text-align: left;
@@ -106,11 +100,13 @@ html, body {
 
 .navStuff {
   font-family: 'Share Tech Mono', monospace;
-  color: #efefef; }
+  color: #efefef;
+  cursor: pointer; }
 
 #navbarLogo {
   font-family: 'Share Tech Mono', monospace;
-  color: #efefef; }
+  color: #efefef;
+  cursor: pointer; }
 
 @keyframes floatInBottom {
   0% {
@@ -169,7 +165,8 @@ html, body {
   .song-play {
     transition: all .2s;
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    cursor: pointer; }
     .song-play:hover {
       transform: scale(1.1); }
     .song-play:active {
@@ -200,10 +197,18 @@ html, body {
   .song-meta {
     display: inline;
     vertical-align: middle;
-    font-size: 12px; }
+    font-size: 12px;
+    cursor: pointer; }
+    .song-meta:hover {
+      transition: all .15s ease-out;
+      color: #afafaf; }
   .song-artist {
     font-size: 15px;
-    vertical-align: middle; }
+    vertical-align: middle;
+    cursor: pointer; }
+    .song-artist:hover {
+      transition: all .15s ease-out;
+      color: #afafaf; }
   .song-playcount {
     font-size: 9px;
     display: inline;
@@ -212,8 +217,7 @@ html, body {
     color: lightgrey; }
 
 #songList {
-  padding: 0px;
-  background-color: #afafaf;
+  padding: 5px;
   border-radius: 10px;
   animation: floatInBottom .2s ease-out;
   animation-fill-mode: backwards; }
@@ -332,3 +336,13 @@ html, body {
     width: 45%;
     display: inline-block;
     vertical-align: top; }
+
+.singleTrack {
+  padding: 5px;
+  animation: floatInBottom .2s ease-out;
+  animation-fill-mode: backwards; }
+  .singleTrack-desc {
+    padding: 20px;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 0; }

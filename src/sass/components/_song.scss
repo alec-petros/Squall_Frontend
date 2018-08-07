@@ -14,6 +14,7 @@
     transition: all .2s;
     display: inline-block;
     vertical-align: middle;
+    cursor: pointer;
     &:hover {
       transform: scale(1.1);
     }
@@ -56,11 +57,21 @@
     display:inline;
     vertical-align: middle;
     font-size: 12px;
+    cursor: pointer;
+    &:hover {
+      transition: all .15s ease-out;
+      color: $color-background-grey-secondary;
+    }
   }
 
   &-artist {
     font-size: 15px;
     vertical-align: middle;
+    cursor: pointer;
+    &:hover {
+      transition: all .15s ease-out;
+      color: $color-background-grey-secondary;
+    }
   }
 
   &-playcount {
